@@ -72,7 +72,7 @@ const JobLIsting = () => {
     {showFilter ? "close": "filters"}
   </button>
 
-  <div className={showFilter? "":"max-length:hidden"}>
+  <div className={showFilter? "":"max-lg:hidden"}>
     <h4 className='font-medium text-lg py-4'>Search by Category</h4>
     <ul className='space-y-4 text-gray-600'>
         {
@@ -118,7 +118,7 @@ const JobLIsting = () => {
 ))}
             </div>
 
-            {jobs.length> 0 && (
+            {jobs.length > 0 && (
                 <div className='flex items-cenyer justify-center space-x-2 mt-4'>
                         <a href="#jobs-list">
                         <img onClick={()=>setCurrentPage(Math.max(currentPage-1),1)} src={assets.left_arrow_icon} alt="" className='mt-3'/>

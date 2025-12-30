@@ -4,6 +4,7 @@ import Hero from '../Component/Hero'
 import JobLIsting from '../Component/JobLIsting'
 import AppDownload from '../Component/AppDownload'
 import Footer from '../Component/Footer'
+import AddJob from './AddJob'
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
         <JobLIsting />
         <AppDownload />
         <Footer/>
+
     </div>
   )
 }

@@ -33,7 +33,7 @@ if(state == "Sign Up" && !isTextDataSubmited){
         <form onSubmit={onSubmitHandler} className='bg-white relative p-10 rounded-xl text-slate-500'>
             <h1 className='text-center text-2xl text-neutral font-medium'>Recuriter {state}</h1>
             <p className='text-sm'>welcome back! please sign in to continue</p>
-           
+
            { state ==="Sign Up" && isTextDataSubmited
       ?<>
       <div className='flex items-center gap-4 my-10'>
@@ -53,7 +53,6 @@ if(state == "Sign Up" && !isTextDataSubmited){
           </div>
           )
       }
-      
   <div  className='border px-4 py-4 flex items-center gap-2 rounded-full mt-5'>
       <img src={assets.email_icon} alt="" />
       <input className='outline-none text-sm' onChange={e=>setEmail(e.target.value)} value={email} type="email" placeholder='Email Id' required/>
@@ -62,26 +61,24 @@ if(state == "Sign Up" && !isTextDataSubmited){
       <img src={assets.lock_icon} alt="" />
       <input className='outline-none text-sm' onChange={e=>setPassword(e.target.value)} value={password} type="password" placeholder='password' required/>
   </div>
-  
+
   </>
            }
-            
 
-              
-        
-            
-        
+
+
+
           <p className='text-blue-600 text:sm mt-4 cursor-pointer'>Forgot password?</p>
-         
+
         <button type='submit' className='bg-blue-600 w-full text-white py-2 rounded-full'>{state==='Login' ? 'login': isTextDataSubmited ? 'create account' : 'next'}</button>
         {
             state ==='Login' ?<p className='mt-5 text-center'>Don't have an account <span onClick={()=>setState("Sign Up")} className='text-blue-600'>Sign Up</span></p>
             : <p className='mt-5 text-center'>Already have an account? <span className='text-blue-600' onClick={()=>setState('Login')}>Login</span></p>
         }
-        
+
         <img onClick={e=>setShowRecruiterLogin(false)} src={assets.cross_icon} alt=""className='absolute top-5 right-5 cursor-pointer' />
         </form>
-        
+
     </div>
   )
 }
